@@ -45,6 +45,7 @@
 - [076.最小覆盖子串](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/076.minWindow)
 - [078.子集](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/078.subsets)
 - [080.删除排序数组中的重复项 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/080.removeDuplicates)
+- [082.删除排序链表中的重复元素 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/082.deleteDuplicates)
 - [084.柱状图中最大的矩形](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/084.largestRectangleArea)
 - [086.分隔链表](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/086.partition)
 - [088.合并两个有序数组](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/088.merge)
