@@ -22,6 +22,7 @@
 - [026.删除排序数组中的重复项](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/026.removeDuplicates)
 - [027.移除元素](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/027.removeElement)
 - [028.实现](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/028.strStr)
+- [029.两数相除](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/029.divide)
 - [030.与所有单词相关联的字串](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/030.findSubstring)
 - [031.加一](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/031.nextPermutation)
 - [033.搜索旋转排序数组](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/033.search)
