@@ -1,6 +1,6 @@
 ## LeetCode 题库
 - [现有84题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
-## 常用排序算法
+## 常用排序算法 
 - [插入排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/insertSort)
 - [冒泡排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/bubbleSort)
 - [归并排序（递归、非递归）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/mergeSort)
