@@ -1,2 +1,2 @@
 ## 常用排序算法
-- [插入排序](http://www.baidu.com)
+- [插入排序](https://github.com/chenqf/technical-summary/tree/master/algorithm/insertSort)
