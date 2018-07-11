@@ -11,7 +11,7 @@ function isThenable(value) {
 /**
  * 控制状态变更为 resolved
  */
-function resolve(value) {
+function resolve(value) {  
     if(value instanceof this.constructor){
         value.then(
             (data)=>{

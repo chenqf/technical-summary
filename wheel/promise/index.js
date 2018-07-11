@@ -1,5 +1,5 @@
 /**
- * 判断是否是 thenable类型
+ * 判断是否是thenable类型
  */
 function isThenable(value) {
     return value && (typeof value === 'object' || typeof value === 'function') && typeof value.then === 'function';
