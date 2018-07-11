@@ -119,7 +119,7 @@ class Promise{
     /**
      * ES2018 引入
      * 回调函数的操作，与状态无关
-     * @param callback 回调参数不接收任何参数
+     * @param fn 回调参数不接收任何参数
      * @returns {*} 返回promise对象，状态及终值与之前一致
      */
     finally(fn){
@@ -139,7 +139,7 @@ class Promise{
      * 用在链式调用的最后一步
      * 用于捕获异常，在全局中提示出来
      * @param onResolve
-     * @param onRejected
+     * @param onReject
      * @returns {*|Promise.<T>}
      */
     done(onResolve,onReject){
