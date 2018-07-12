@@ -6,3 +6,4 @@
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [模拟bind函数](https://github.com/chenqf/technical-summary/tree/master/src/other/bind)
 - [连乘函数 console.log(mul(2)(3)(4))-->24](https://github.com/chenqf/technical-summary/tree/master/src/other/mul)
+- [数组扁平化 [1,[2,[3,[4]]]] ]-->[1,2,3,4](https://github.com/chenqf/technical-summary/tree/master/src/other/flatten)
