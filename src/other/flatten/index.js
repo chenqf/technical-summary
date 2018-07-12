@@ -1,10 +1,16 @@
 
+// 解法 1 使用 reduce
+Array.prototype.flatten = function (depth = Infinity) {
+    if(depth){
+        return this.reduce((init,cur)=>{
+            return init.concat(Array.isArray(cur)?cur.flatten(depth - 1):cur);
+        },[]);
+    }else{
+        return this;
+    }
+};
 
-Function.prototype.bind = function (context,...rest) {
-    let self = this;
-    let F = function (...params) {
-        return self.apply(this instanceof F ? this : context,[...rest,...params]);
-    };
-    F.prototype = Object.create(self.prototype);
-    return F;
+// 解法 2
+Array.prototype.flatten = function (depth = Infinity) {
+    return [].concat(...this.map((i)=> Array.isArray(i) && depth ? i.flatten(depth - 1): i))
 };
