@@ -2,27 +2,18 @@
 
 ```javascript 1.8
 /**
- * 判断是否是 thenable类型
+ * 判断是否是thenable类型
  */
 function isThenable(value) {
-    return value && (typeof value === 'object' || typeof value === 'function') && typeof value.then === 'function';
+    return value && typeof value.then === 'function';
 }
 
 /**
  * 控制状态变更为 resolved
  */
-function resolve(value) {  
-    if(value instanceof this.constructor){
+function resolve(value) {
+    if(value instanceof this.constructor || isThenable(value)){
         value.then(
-            (data)=>{
-                resolve.call(this,data);
-            },
-            (reason)=>{
-                reject.call(this,reason);
-            }
-        )
-    }else if(isThenable(value)){
-        new this.constructor(value.then).then(
             (data)=>{
                 resolve.call(this,data);
             },
@@ -122,7 +113,7 @@ class Promise{
     /**
      * ES2018 引入
      * 回调函数的操作，与状态无关
-     * @param callback 回调参数不接收任何参数
+     * @param fn 回调参数不接收任何参数
      * @returns {*} 返回promise对象，状态及终值与之前一致
      */
     finally(fn){
@@ -142,7 +133,7 @@ class Promise{
      * 用在链式调用的最后一步
      * 用于捕获异常，在全局中提示出来
      * @param onResolve
-     * @param onRejected
+     * @param onReject
      * @returns {*|Promise.<T>}
      */
     done(onResolve,onReject){
@@ -218,5 +209,6 @@ class Promise{
 
     }
 }
+
 
 ```

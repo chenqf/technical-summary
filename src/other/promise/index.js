@@ -2,24 +2,15 @@
  * 判断是否是thenable类型
  */
 function isThenable(value) {
-    return value && (typeof value === 'object' || typeof value === 'function') && typeof value.then === 'function';
+    return value && typeof value.then === 'function';
 }
 
 /**
  * 控制状态变更为 resolved
  */
 function resolve(value) {
-    if(value instanceof this.constructor){
+    if(value instanceof this.constructor || isThenable(value)){
         value.then(
-            (data)=>{
-                resolve.call(this,data);
-            },
-            (reason)=>{
-                reject.call(this,reason);
-            }
-        )
-    }else if(isThenable(value)){
-        new this.constructor(value.then).then(
             (data)=>{
                 resolve.call(this,data);
             },
