@@ -1,0 +1,25 @@
+{
+  "name": "technical-summary",
+  "version": "1.0.0",
+  "description": "technical-summary",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenqf/technical-summary.git"
+  },
+  "keywords": [
+    "technical"
+  ],
+  "author": "chenqf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenqf/technical-summary/issues"
+  },
+  "homepage": "https://github.com/chenqf/technical-summary#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
