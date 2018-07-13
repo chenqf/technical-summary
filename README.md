@@ -3,6 +3,7 @@
 ## 算法题
 - [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/flatten)
 - [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/shuffle)
+- [找出数组中两项之和等于sum的下标](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/sumIndex)
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
