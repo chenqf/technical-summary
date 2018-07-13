@@ -1,8 +1,8 @@
 ## 常用排序算法
 - [插入排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/insertSort)
 ## 算法题
-- [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/other/flatten)
-- [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/shuffle)
+- [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/flatten)
+- [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/shuffle)
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
