@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test hash router</title>
+</head>
+<body>
+    <a href="#/">Home</a>
+    <a href="#/about">About</a>
+    <a href="#/topics">Topics</a>
+<div id="content">
+
+</div>
+</body>
+<script>
+    class Router{
+        constructor(){
+            this.routers = {};
+            this.init();
+        }
+        route(path,fn = Function.prototype){
+            this.routers[path] = fn;
+        }
+        load(){
+            let hash = location.hash.slice(1),
+                currentUrl = hash || '/',
+                handler = this.routers[currentUrl] || Function.prototype;
+            handler();
+        }
+        init(){
+            window.addEventListener('hashchange',this.load.bind(this));
+            window.addEventListener('load',this.load.bind(this));
+        }
+    }
+
+    let router = new Router;
+    router.route('/',()=>{document.getElementById('content').innerHTML = 'Home';});
+    router.route('/about',()=>{document.getElementById('content').innerHTML = 'About';});
+    router.route('/topics',()=>{document.getElementById('content').innerHTML = 'Topics';});
+</script>
+</html>
