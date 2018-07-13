@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test hash router</title>
+</head>
+<body>
+    <button id="home">Home</button>
+    <button id="about">About</button>
+    <button id="topics">Topics</button>
+<div id="content">
+
+</div>
+</body>
+<script>
+    class Router{
+        constructor(){
+            this.routers = {};
+            this.init();
+        }
+        load(){
+            let url = location.pathname || '/';
+            this.routers[url] && this.routers[url]();
+        }
+        changePage(url){
+            history.pushState({},null,url);
+            this.routers[url] && this.routers[url]();
+        }
+        replacePage(url){
+            history.replaceState({},null,url);
+            this.routers[url] && this.routers[url]();
+        }
+        route(path,fn = Function.prototype){
+            this.routers[path] = fn;
+        }
+        init(){
+            window.addEventListener('load',this.load.bind(this));
+            window.addEventListener('popstate',this.load.bind(this));
+        }
+    }
+
+    let router = new Router;
+    router.route('/',()=>{document.getElementById('content').innerHTML = 'Home';});
+    router.route('/about',()=>{document.getElementById('content').innerHTML = 'About';});
+    router.route('/topics',()=>{document.getElementById('content').innerHTML = 'Topics';});
+    document.getElementById('home').onclick = function () {
+        router.changePage('/')
+    }
+    document.getElementById('about').onclick = function () {
+        router.changePage('/about')
+    }
+    document.getElementById('topics').onclick = function () {
+        router.changePage('/topics')
+    }
+</script>
+</html>
