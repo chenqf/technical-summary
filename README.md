@@ -4,6 +4,7 @@
 - [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/flatten)
 - [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/shuffle)
 - [找出数组中两项之和等于sum的索引值](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/sumIndex)
+- [两个有序数组合并为一个有序数组](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/mergeArray)
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
