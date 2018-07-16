@@ -3,6 +3,7 @@
 ## 算法题
 - [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/flatten)
 - [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/shuffle)
+- [二分法查找](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/binarySearch)
 - [函数组合串联（compose）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/compose)
 - [找出数组中两项之和等于sum的索引值](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/sumIndex)
 - [两个有序数组合并为一个有序数组](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/mergeArray)
