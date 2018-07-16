@@ -21,5 +21,8 @@
   "homepage": "https://github.com/chenqf/technical-summary#readme",
   "dependencies": {
     "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
   }
 }
