@@ -22,4 +22,9 @@ function getMaxOrMinItemAndIndex(list) {
     }
     return {min:minIndex,max:maxIndex}
 }
+
+let arr = [2, 10, 9, 1, 8, 3, 4];
+let result = getMaxOrMinItemAndIndex(arr);
+console.log(result); // {min: 0, max: 4}
+
 ```
