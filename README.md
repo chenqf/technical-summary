@@ -9,7 +9,7 @@
 - [找出数组中两项之和等于sum的索引值](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/sumIndex)
 - [两个有序数组合并为一个有序数组](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/mergeArray)
 - [获取数组中元素与索引值和的最大/最小值](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/getMaxOrMinItemAndIndex)
-## 正则相关 unique
+## 正则相关 
 - [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/regExp/adjacentUnique)
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
