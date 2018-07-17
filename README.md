@@ -16,6 +16,7 @@
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
 - [监察者模式简单实现](https://github.com/chenqf/technical-summary/tree/master/src/other/observer)
 - [模拟bind函数](https://github.com/chenqf/technical-summary/tree/master/src/other/bind)
+- [防抖函数与节流函数](https://github.com/chenqf/technical-summary/tree/master/src/other/debounce_throttle)
 - [函数柯里化](https://github.com/chenqf/technical-summary/tree/master/src/other/curry)
 - [面向切面变成（AOP）](https://github.com/chenqf/technical-summary/tree/master/src/other/aop)
 - [连乘函数 console.log(mul(2)(3)(4))-->24](https://github.com/chenqf/technical-summary/tree/master/src/other/mul)
