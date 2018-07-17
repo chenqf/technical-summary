@@ -13,6 +13,7 @@
 - [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/regExp/adjacentUnique)
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
+- [数组并集、交集、差集](https://github.com/chenqf/technical-summary/tree/master/src/other/setOperation)
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
 - [监察者模式简单实现](https://github.com/chenqf/technical-summary/tree/master/src/other/observer)
 - [模拟bind函数](https://github.com/chenqf/technical-summary/tree/master/src/other/bind)
