@@ -24,3 +24,4 @@
 - [函数柯里化](https://github.com/chenqf/technical-summary/tree/master/src/other/curry)
 - [面向切面变成（AOP）](https://github.com/chenqf/technical-summary/tree/master/src/other/aop)
 - [连乘函数 console.log(mul(2)(3)(4))-->24](https://github.com/chenqf/technical-summary/tree/master/src/other/mul)
+- [canvas 水印实现](https://github.com/chenqf/technical-summary/tree/master/src/other/watermark)
