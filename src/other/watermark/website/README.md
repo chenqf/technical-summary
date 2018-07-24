@@ -1,5 +1,7 @@
 
 
+![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/other/watermark/website/img.png)
+
 ```javascript 1.8
     /**
      * 生成网页水印
