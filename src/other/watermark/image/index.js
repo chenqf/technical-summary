@@ -1,47 +1,39 @@
 (function () {
     /**
-     * 生成网页水印
-     * 通过canvas 生成图片
-     * 通过全局遮盖一个div实现
+     * 在图片底部增加水印
+     * 下载图片后，将图片充满canvas，并添加水印
+     * 将canvas转换为base64的url地址
      */
-    function watermark(text) {
-        var container = document.body,
-            width = '200px',
-            height = '150px',
+    function watermark(url,text,callback) {
+        var imageUrl = url || '',
             textAlign = 'center',
             textBaseline = 'middle',
-            font = "20px microsoft yahei",
-            fillStyle = 'rgba(184, 184, 184, 0.8)',
+            font = "20px Microsoft Yahei",
+            fillStyle = 'rgba(184, 184, 184, 0.9)',
             content = text || '请勿外传',
-            rotate = 30,
-            zIndex = 1000;
-        var canvas = document.createElement('canvas');
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
-        var ctx = canvas.getContext("2d");
-        ctx.textAlign = textAlign;
-        ctx.textBaseline = textBaseline;
-        ctx.font = font;
-        ctx.fillStyle = fillStyle;
-        ctx.rotate(Math.PI / 180 * rotate);
-        ctx.fillText(content, parseFloat(width) / 2, parseFloat(height) / 2);
-        var base64Url = canvas.toDataURL();//用作水印的图片url
-        var watermarkDiv = document.createElement("div");//用作水印的div遮罩层
-        var styleList = [];
-        styleList.push('position:absolute');
-        styleList.push('top:0');
-        styleList.push('left:0');
-        styleList.push('bottom:0');
-        styleList.push('right:0');
-        styleList.push('right:0');
-        styleList.push('z-index:' + zIndex);
-        styleList.push('pointer-events:none');
-        styleList.push('background-repeat:repeat');
-        styleList.push('background-image:url(' + base64Url + ')');
-        watermarkDiv.setAttribute('style', styleList.join(';'));
-        container.style.position = 'relative';
-        container.insertBefore(watermarkDiv, container.firstChild);
+            cb = callback || Function.prototype,
+            textX = 100,
+            textY = 30;
+        var img = new Image();
+
+        img.crossOrigin = 'anonymous';
+        img.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            ctx.textAlign = textAlign;
+            ctx.textBaseline = textBaseline;
+            ctx.font = font;
+            ctx.fillStyle = fillStyle;
+            ctx.fillText(content, img.width - textX, img.height - textY);
+            var base64Url = canvas.toDataURL();
+            cb(base64Url);
+        };
+        img.src = imageUrl;
     }
+
     if (typeof module != 'undefined' && module.exports) {  //CMD
         module.exports = watermark;
     } else if (typeof define == 'function' && define.amd) { // AMD
@@ -52,5 +44,9 @@
         window.watermark = watermark;
     }
 })();
+
 // 调用
-watermark('QQMusicFE')
+var url = 'https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=944aee0ebafd5266b3263446ca71fc4e/024f78f0f736afc36cb0dd80bf19ebc4b6451292.jpg';
+watermark(url,'终身偶像',function (base64Url) {
+    document.querySelector('#demo').src = base64Url;
+});
