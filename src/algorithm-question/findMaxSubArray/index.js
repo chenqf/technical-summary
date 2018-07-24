@@ -28,42 +28,46 @@ function findMaxSubArray2(list) {
         return list;
     }
     let mid = ~~(len/2);
-    let left = list.slice(0,mid);
-    let right = list.slice(mid);
 
-    let sum = list[mid];
-    let midSum = list[mid];
-    let leftIndex = mid,rightIndex = mid;
+    let midLeftSum = list[mid],
+        tempLeftSum = midLeftSum,
+        midLeftIndex = mid;
+
+    //先计算左侧
     for(let i = mid -1; i>=0;i--){
-        sum = sum + list[i];
-        if(sum > midSum){
-            midSum = sum;
-            leftIndex = i;
+        tempLeftSum = tempLeftSum + list[i];
+        if(tempLeftSum > midLeftSum){
+            midLeftSum = tempLeftSum;
+            midLeftIndex = i;
         }
     }
+    let midSum = midLeftSum,
+        midRightIndex = mid,
+        tempRightSum = midSum;
     for(let i = mid +1;i<len; i++){
-        sum = sum + list[i];
-        if(sum > midSum){
-            midSum = sum;
-            rightIndex = i;
+        tempRightSum = tempRightSum + list[i];
+        if(tempRightSum > midSum){
+            midSum = tempRightSum;
+            midRightIndex = i;
         }
     }
-    let midList = list.slice(leftIndex,rightIndex +1);
-    let leftList = findMaxSubArray2(left);
-    let rightList = findMaxSubArray2(right);
-    let leftSum = leftList.reduce((a,b)=>a+b,0);
-    let rightSum = rightList.reduce((a,b)=>a+b,0);
+    let midSub = list.slice(midLeftIndex,midRightIndex + 1);
+    let leftSub = findMaxSubArray2(list.slice(0,mid));
+    let rightSub = findMaxSubArray2(list.slice(mid));
+
+    let leftSum = leftSub.reduce((a,b)=>a+b,0);
+    let rightSum = rightSub.reduce((a,b)=>a+b,0);
     if(midSum >= leftSum && midSum >= rightSum){
-        return midList;
+        return midSub;
     }
     if(leftSum >= midSum && leftSum >= rightSum){
-        return leftList;
+        return leftSub;
     }
     if(rightSum >= midSum && rightSum >= leftSum){
-        return rightList;
+        return rightSub;
     }
 }
 
 
-console.log(findMaxSubArray1([1,2,-10,23,-1,-2,10,12,-1,-14,29])); // [23, -1, -2, 10, 12, -1, -14, 29]
-console.log(findMaxSubArray2([1,2,-10,23,-1,-2,10,12,-1,-14,29])); // [23, -1, -2, 10, 12, -1, -14, 29]
+console.log(findMaxSubArray1([1,2,-10,23,-1,-2,10,12,-1,-14,29,-10,1,2,3])); // [23, -1, -2, 10, 12, -1, -14, 29]
+console.log(findMaxSubArray2([1,2,-10,23,-1,-2,10,12,-1,-14,29,-10,1,2,3])); // [23, -1, -2, 10, 12, -1, -14, 29]
