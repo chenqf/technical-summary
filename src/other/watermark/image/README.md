@@ -1,5 +1,5 @@
 
-![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/other/watermark/image/img.png)
+![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/other/watermark/image/C.png)
 ```javascript 1.8
 /**
  * 在图片底部增加水印
