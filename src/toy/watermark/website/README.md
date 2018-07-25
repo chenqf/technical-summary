@@ -1,6 +1,6 @@
 
 
-![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/other/watermark/website/img.png)
+![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/toy/watermark/website/img.png)
 
 ```javascript 1.8
     /**
