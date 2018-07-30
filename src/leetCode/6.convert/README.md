@@ -5,6 +5,8 @@
 ### 分析
 > 将字母排成Z形状（Z竖起来），比如：
 >> 字符串 ABCDEFGHIGKLMNO 排列成5行
+
+
 ![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/leetCode/6.convert/img.png)
 
 
