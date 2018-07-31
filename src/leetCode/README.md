@@ -94,6 +94,7 @@
 - [345.反转字符串中的元音字母](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/345.reverseVowels)
 - [349.两个数组的交集](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/349.intersection)
 - [350.两个数组的交集 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/350.intersect)
+- [367.有效的完全平方数](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/367.isPerfectSquare)
 - [374.猜数字大小](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/374.guessNumber)
 - [495.提莫攻击](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/495.findPoisonedDuration)
 - [524.通过删除字母匹配到字典里最长单词](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/524.findLongestWord)
