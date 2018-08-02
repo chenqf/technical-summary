@@ -16,6 +16,9 @@
 > 输入: [1,3,5,6], 0  
 > 输入: 0
 
+### 思路
+> 看到排序数组，就想着用二分法
+
 ### 二分法递归求解
 ```javascript 1.8
 let searchInsert = function(nums, target,start = 0,end = nums.length - 1) {
