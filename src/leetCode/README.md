@@ -44,6 +44,7 @@
 - [059.螺旋矩阵 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/059.generateMatrix)
 - [061.旋转链表](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/061.rotateRight)
 - [066.加一](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/066.plusOne)
+- [069.x](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/069.mySqrt)
 - [071.简化路径](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/071.simplifyPath)
 - [074.搜索二维矩阵](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/074.searchMatrix)
 - [075.颜色分类](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/075.sortColors)
