@@ -32,7 +32,7 @@ let firstMissingPositive = function (nums) {
         if(i>0 && !list[i]){
             return i;
         }
-    }
+    }  
     return list.length;
 };
 ```
