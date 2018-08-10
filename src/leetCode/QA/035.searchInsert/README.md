@@ -19,6 +19,28 @@
 ### 思路
 > 看到排序数组，就想着用二分法
 
+### 二分法非递归求解
+```javascript 1.8
+let searchInsert = function(nums, target) {
+    let len = nums.length,
+        left = 0,
+        right = len - 1;
+    while (left <= right){
+        let mid = ~~((left + right)/2),
+            midVal = nums[mid];
+        if(midVal === target){
+            return mid;
+        }else if(midVal > target){
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
+    }
+    return left;
+};
+```
+
+
 ### 二分法递归求解
 ```javascript 1.8
 let searchInsert = function(nums, target,start = 0,end = nums.length - 1) {

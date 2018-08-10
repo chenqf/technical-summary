@@ -22,4 +22,24 @@ let searchInsert = function(nums, target,start = 0,end = nums.length - 1) {
         return searchInsert(nums,target,mid + 1,end);
     }
 };
+
+
+let searchInsert1 = function(nums, target) {
+    let len = nums.length,
+        left = 0,
+        right = len - 1;
+    while (left <= right){
+        let mid = ~~((left + right)/2),
+            midVal = nums[mid];
+        if(midVal === target){
+            return mid;
+        }else if(midVal > target){
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
+    }
+    return left;
+};
+
 console.log(searchInsert([3,5,7,9,10],0));
