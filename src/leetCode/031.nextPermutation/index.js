@@ -1,31 +1,41 @@
 
 
 let nextPermutation = function (nums) {
-    let len = nums.length;
-    let sortIndex = 0;
-    for(let i = len - 1; i>0; i--){
-        let j = i - 1;
+    let list = [];
+    for(let len = nums.length,i = len -1; i>0; i--){
         let temp = nums[i];
-        while (j >= 0 && nums[j] >= temp){
-            j -- ;
+        let j = i - 1;
+        while (j>=0 && nums[j]>=temp){
+            j --;
         }
-        if(j>=0){
-            nums[i] = nums[j];
-            nums[j] = temp;
-            sortIndex = j + 1;
-            break;
+        if(j >= 0){
+            list.push({
+                i,j
+            })
         }
     }
-    nums.sort((cur,next)=>{
-        if(sortIndex){
-            sortIndex--;
-            return -1;
+    list.sort((a,b)=>{
+        let r = b.j - a.j;
+        if(!r){
+            return nums[a.i] - nums[b.i];
+        }else{
+            return r;
         }
-        return cur - next;
     });
-    console.log(sortIndex,nums);
-    // return nums;
+    if(list.length){
+        let item = list[0];
+        let i = item.i;
+        let j = item.j;
+        let temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+        let sortList = nums.splice(j + 1).sort((a,b)=>a-b);
+        Array.prototype.push.apply(nums,sortList)
+    }else{
+        nums.reverse();
+    }
+    console.log(nums);
 };
 
-console.log(nextPermutation([2,2,7,5,4,3,2,2,1]));
+console.log(nextPermutation([4,2,0,2,3,2,0]));
 // console.log(nextPermutation([1,3,4]));
