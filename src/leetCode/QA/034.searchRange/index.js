@@ -26,3 +26,27 @@ let searchRange = function(nums,target,start = 0,end = nums.length - 1) {
     }
 };
 
+let searchRange1 = function(nums,target) {
+    let len = nums.length;
+    let left = 0,right = len - 1;
+    while (left <= right){
+        let mid = ~~((left + right)/2),
+            midVal = nums[mid];
+        if(midVal === target){
+            let i = mid,j = mid;
+            while (i - 1 >= 0 && nums[i - 1] === midVal){
+                i--;
+            }
+            while (j + 1 < len && nums[j + 1] === midVal){
+                j++;
+            }
+            return [i,j]
+        }else if(midVal > target){
+            right = mid - 1;
+        }else{
+            left = mid + 1;
+        }
+    }
+    return [-1,-1]
+}
+
