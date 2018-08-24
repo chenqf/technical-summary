@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //    window.onerror = function(msg, url, row, col, error) {
+    //        console.log(1,{
+    //            msg,  url,  row, col, error
+    //        });
+    //        return true;
+    //    }
+    const round = (n, decimals = 0) => Number()
+
+    function round(n,decimals = 0){
+        return Number(`${Math.round(`${n}e${decimals}`)}e-${decimals}`)
+    }
+
+
+    window.addEventListener('error', (msg, url, row, col, error) => {
+        debugger
+        console.log(msg.target.src);
+        return true;
+    }, true);
+</script>
+<body>
+<img src="sdfsdfsf">
+<script>
+    new Promise((resolve, reject) => {
+        resolve();
+    }).then(function () {
+        throw 123
+    })
+</script>
+</body>
+</html>
