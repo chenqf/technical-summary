@@ -12,7 +12,6 @@
 > 输入: s = "wordgoodstudentgoodword",words = ["word","student"]      
 > 输出: []     
 
-
 ### 解法
 ```javascript 1.8
 let findSubstring = function(s, words) {
