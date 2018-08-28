@@ -16,5 +16,31 @@ function ListNode(val) {
 
 ### 解法
 ```javascript 1.8
+let detectCycle = function(head) {
+    if(!head || !head.next){
+        return null;
+    }
+    let low = head;
+    let fast = head;
+    let X = head,Y;
+    while (fast){
+        if(!fast.next || !fast.next.next){
+            return null;
+        }
+        low = low.next;
+        fast = fast.next.next;
+        if(low === fast){
+            Y = fast;
+            break;
+        }
+    }
+    while (true){
+        if(X === Y){
+            return X;
+        }
+        X = X.next;
+        Y = Y.next;
+    }
 
+};
 ```
