@@ -1,6 +1,6 @@
 
 
-let partitionLabels = function(S) {
+let partitionLabels1 = function(S) {
     let len = S.length;
     let map = new Map();
     let res = [];
@@ -33,6 +33,26 @@ let partitionLabels = function(S) {
             }else{
                 j++;
             }
+        }
+    }
+    return res;
+};
+
+
+
+let partitionLabels2 = function(S) {
+    let len = S.length;
+    let map = new Map();
+    let res = [];
+    for(let i = 0;i<len; i++){
+        map.set(S[i],i);
+    }
+    let start = 0,last = 0;
+    for(let i = 0;i<len; i++){
+        last = Math.max(last,map.get(S[i]));
+        if(i === last){
+            res.push(last - start + 1);
+            start = last + 1;
         }
     }
     return res;

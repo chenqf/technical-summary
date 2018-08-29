@@ -11,7 +11,7 @@
 >> 像 "ababcbacadefegde", "hijhklij" 的划分是错误的，因为划分的片段数较少。     
 
 
-### 解法
+### 解法 1 
 ```javascript 1.8
 let partitionLabels = function(S) {
     let len = S.length;
@@ -46,6 +46,27 @@ let partitionLabels = function(S) {
             }else{
                 j++;
             }
+        }
+    }
+    return res;
+};
+```
+
+### 解法 2
+```javascript 1.8
+let partitionLabels = function(S) {
+    let len = S.length;
+    let map = new Map();
+    let res = [];
+    for(let i = 0;i<len; i++){
+        map.set(S[i],i);
+    }
+    let start = 0,last = 0;
+    for(let i = 0;i<len; i++){
+        last = Math.max(last,map.get(S[i]));
+        if(i === last){
+            res.push(last - start + 1);
+            start = last + 1;
         }
     }
     return res;
