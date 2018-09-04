@@ -7,7 +7,7 @@
 >> 字符串 ABCDEFGHIGKLMNO 排列成5行
 
 
-![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/leetCode/006.convert/img.png)
+![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/leetCode/QA/006.convert/img.png)
 
 
 ### 示例1

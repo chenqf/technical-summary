@@ -2,7 +2,7 @@
 ## 杨辉三角
 > 给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。
 
-![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/leetCode/118.generate/img.gif)
+![avatar](https://raw.githubusercontent.com/chenqf/technical-summary/master/src/leetCode/QA/118.generate/img.gif)
 
 ### 示例 1
 > 输入: 5 
