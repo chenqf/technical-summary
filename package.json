@@ -23,6 +23,7 @@
     "lodash": "^4.17.10"
   },
   "devDependencies": {
+    "files-tree": "^1.0.8",
     "promises-aplus-tests": "^2.1.2"
   }
 }
