@@ -1,3 +1,5 @@
+## LeetCode 题库
+- [现有77题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
 ## 常用排序算法
 - [插入排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/insertSort)
 - [冒泡排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/bubbleSort)
@@ -28,6 +30,3 @@
 
 ## 小玩具
 - [canvas 水印实现](https://github.com/chenqf/technical-summary/tree/master/src/toy/watermark)
-
-## LeetCode 题库
-- [1.两数之和](https://github.com/chenqf/technical-summary/tree/master/src/toy/watermark)
