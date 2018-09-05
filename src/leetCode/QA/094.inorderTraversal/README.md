@@ -12,7 +12,7 @@
 > 输出: [1,3,2]
 
 
-### 数结构
+### 树结构
 ```javascript 1.8
 function TreeNode(val) {
     this.val = val;
