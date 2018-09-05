@@ -40,7 +40,7 @@ let preorderTraversal = function(root) {
 
 ### 调用栈解法
 ```javascript 1.8
-let preorderTraversal1 = function (root) {
+let preorderTraversal = function (root) {
     if(!root){
         return [];
     }
