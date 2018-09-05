@@ -38,3 +38,22 @@ let inorderTraversal = function(root) {
 };
 
 ```
+
+### 调用栈解法
+```javascript 1.8
+let inorderTraversal = function(root) {
+    let res = [];
+    let p = root;
+    let list = [];
+    while (p || list.length){
+        while (p){
+            list.push(p);
+            p = p.left;
+        }
+        let cur = list.pop();
+        res.push(cur.val);
+        p = cur.right;
+    }
+    return res;
+};
+```
