@@ -4,9 +4,6 @@ function TreeNode(val) {
     this.left = this.right = null;
 }
 
-let helpler = function (preorder,inorder) {
-
-};
 
 let buildTree = function(preorder, inorder) {
     if(!preorder.length || !inorder.length){
