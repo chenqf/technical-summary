@@ -57,6 +57,8 @@
 - [088.合并两个有序数组](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/088.merge)
 - [090.子集 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/090.subsetsWithDup)
 - [094.二叉树的中序遍历](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/094.inorderTraversal)
+- [105.从前序与中序遍历序列构造二叉树](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/105.buildTree)
+- [106.从中序与后序遍历序列构造二叉树](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/106.buildTree)
 - [118.杨辉三角](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/118.generate)
 - [119.杨辉三角 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/119.getRow)
 - [121.买卖股票的最佳时机](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/121.maxProfit)
