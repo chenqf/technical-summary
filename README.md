@@ -1,5 +1,5 @@
 ## LeetCode 题库
-- [现有99题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
+- [现有101题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
 ## 常用排序算法  
 - [插入排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/insertSort)
 - [冒泡排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/bubbleSort)
