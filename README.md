@@ -1,11 +1,11 @@
 ## LeetCode 题库
-- [现有98题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
-## 常用排序算法 
+- [现有99题（持续更新）](https://github.com/chenqf/technical-summary/tree/master/src/leetCode)
+## 常用排序算法  
 - [插入排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/insertSort)
 - [冒泡排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/bubbleSort)
 - [归并排序（递归、非递归）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/mergeSort)
 - [堆排序](https://github.com/chenqf/technical-summary/tree/master/src/algorithm/heapSort)
-## 算法题
+## 算法题  
 - [数组扁平化](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/flatten)
 - [洗牌（随机打乱数组）](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/shuffle)
 - [二分法查找](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/binarySearch)

@@ -51,6 +51,7 @@
 - [078.子集](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/078.subsets)
 - [079.单词搜索](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/079.exist)
 - [080.删除排序数组中的重复项 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/080.removeDuplicates)
+- [081.搜索旋转排序数组 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/081.search)
 - [082.删除排序链表中的重复元素 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/082.deleteDuplicates)
 - [084.柱状图中最大的矩形](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/084.largestRectangleArea)
 - [086.分隔链表](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/086.partition)
