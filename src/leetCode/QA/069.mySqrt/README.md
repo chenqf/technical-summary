@@ -17,24 +17,22 @@
 
 ### 解法
 ```javascript 1.8
-let mySqrt = function(x) {
-    if(x === 0){
-        return 0;
-    }else if(x === 1){
-        return 1;
+let  mySqrt = function (x) {
+    if(x === 0 || x === 1){
+        return x;
     }
     let left = 1,right = x;
-    while (left < right - 1){
+    while (left <= right){
         let mid = ~~((left + right)/2);
         let cur = mid * mid;
         if(cur === x){
             return mid;
         }else if(cur > x){
-            right = mid;
-        }else if(cur < x){
-            left = mid;
+            right = mid - 1;
+        }else{
+            left = mid + 1;
         }
     }
-    return left;
-};
+    return left - 1;
+}
 ```
