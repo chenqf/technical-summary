@@ -25,20 +25,16 @@ let solution = function(isBadVersion) {
     return function(n) {
         let left = 1,
             right = n;
-        while (left < right - 1){
-            let mid = ~~((left + right)/2),
-                midValue = isBadVersion(mid);
-            if(!midValue){
-                left = mid;
+        while (left <= right){
+            let mid = ~~((left + right)/2);
+            let cur = isBadVersion(mid);
+            if(cur){
+                right = mid - 1;
             }else{
-                right = mid;
+                left = mid + 1;
             }
         }
-        if(isBadVersion(left)){
-            return left;
-        }else{
-            return right;
-        }
+        return left;
     };
 };
 ```
