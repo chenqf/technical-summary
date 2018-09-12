@@ -23,3 +23,23 @@ let arrangeCoins = function(n) {
     }
     return left - 1;
 };
+
+
+
+let arrangeCoins = function (n) {
+    let left = 1,
+        right = n;
+    if(!n) return n;
+    while (left <= right){
+        let mid = ~~((left + right)/2);
+        let cur = mid * (mid + 1) / 2;
+        if(cur === n){
+            return mid;
+        }else if(cur > n){
+            right = mid - 1;
+        }else {
+            left = mid + 1;
+        }
+    }
+    return left - 1;
+};
