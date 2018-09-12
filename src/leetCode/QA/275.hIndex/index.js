@@ -1,23 +1,35 @@
-
-
 let hIndex = function(citations) {
     let len = citations.length,
         left = 0,
         right = len - 1;
-    while(left < right - 1){
+    while (left <= right){
         let mid = ~~((left + right)/2),
-            midValue = citations[mid];
-        if(midValue >= len - mid){
-            right = mid;
+            midVal = citations[mid],
+            num = len - mid;
+        if(midVal >= num){
+            right = mid - 1;
         }else{
-            left = mid;
+            left = mid + 1;
         }
     }
-    if(citations[left] >= len - left){
-        return len - left
-    }else if(citations[right] >= len - right){
-        return len - right;
-    }else{
-        return 0;
-    }
+    return len - left;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
