@@ -1,13 +1,17 @@
 
 
 let twoSum = function(numbers, target) {
-    let map = new Map();
-    for(let i = 0,len = numbers.length; i<len; i++){
-        let cur = numbers[i];
-        if(map.has(target - cur)){
-            return [map.get(target - cur) + 1,i + 1]
+    let left = 0,
+        right = numbers.length - 1;
+    while (left < right){
+        let sum = numbers[left] + numbers[right];
+        if(sum === target){
+            return [left + 1,right + 1];
+        }else if(sum > target){
+            right--;
+        }else{
+            left++;
         }
-        map.set(cur,i);
     }
 };
 
