@@ -83,3 +83,25 @@ proto.findIndex = proto.findIndex || function (predicate,thisArg) {
     return -1;
 };
 
+
+/**
+ 使用给定值，填充一个数组
+ @param {T} value
+ @param {number} [start]
+ @param {number} [end]
+ @return {Array.<T>}
+ */
+proto.fill = proto.fill || function (value,start,end) {
+   var len = this.length;
+   start = start || 0;
+   end = end || len;
+   if(start < 0) start = start + len;
+   if(end < 0) end = end + len;
+   for(var i = 0; i<len; i++){
+       if(i >= start && i<end){
+           this[i] = value;
+       }
+   }
+   return this;
+};
+
