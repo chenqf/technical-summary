@@ -104,4 +104,24 @@ proto.fill = proto.fill || function (value,start,end) {
    }
    return this;
 };
+/**
+ 返回 boolean 值，表示是否包含该元素
+ 可用来判断 NaN
+ @param {T} searchElement
+ @param {number} [fromIndex]
+ @return {boolean}
+ */
+proto.includes = proto.includes || function (searchElement,fromIndex) {
+    fromIndex = fromIndex || 0;
+    var len = this.length;
+    if(fromIndex < 0) fromIndex = fromIndex + len;
+    for(var i = fromIndex; i<len; i++){
+        if(searchElement !== searchElement && this[i] !== this[i]){
+            return true;
+        }else if(searchElement === this[i]){
+            return true;
+        }
+    }
+    return false;
+};
 
