@@ -12,6 +12,8 @@ Number.MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || ( Math.pow(2,53) - 1 );
 //最小安全整数
 Number.MIN_SAFE_INTEGER = Number.MIN_SAFE_INTEGER || ( - Math.pow(2,53) + 1 );
 //浮点数范围
+// Number.MIN_VALUE
+// Number.MAX_VALUE
 
 //方法移植
 Number.parseInt = Number.parseInt || parseInt;
