@@ -114,7 +114,7 @@ proto.fill = proto.fill || function (value,start,end) {
 proto.includes = proto.includes || function (searchElement,fromIndex) {
     fromIndex = fromIndex || 0;
     var len = this.length;
-    if(fromIndex < 0) fromIndex = fromIndex + len;
+    if(fromIndex < 0) fromIndex = Math.max(fromIndex + len);
     for(var i = fromIndex; i<len; i++){
         if(searchElement !== searchElement && this[i] !== this[i]){
             return true;
@@ -124,4 +124,25 @@ proto.includes = proto.includes || function (searchElement,fromIndex) {
     }
     return false;
 };
+/**
+ 数组扁平化
+ @param {number} deep 深度，默认为1
+ @return {array}
+ */
+proto.flat = proto.flat || function (depth) {
+        depth = Number(depth) || 1;
+    return this.reduce(function (init,cur) {
+        return init.concat(depth - 1 > 0 ? (Array.isArray(cur) ? cur.flat(depth - 2) : cur) : cur)
+    },[])
+};
 
+
+/**
+ 先执行map，再执行flat
+ @param {function(T=, number=, Array.<T>=)} callback
+ @param {*} [thisArg]
+ @return {Array}
+ */
+proto.flatMap = proto.flatMap || function (callback , thisArg) {
+    return this.map(callback,thisArg).flat();
+};
