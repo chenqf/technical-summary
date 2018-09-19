@@ -12,7 +12,7 @@ Object.is = Object.is || function (a, b) {
 
 Object.assign = function(){
     var target = Object(arguments[0]);
-    var args = Array.prototype.slice(1).filter(function (item) {
+    var args = Array.prototype.slice.call(arguments,1).filter(function (item) {
         return item !== null && (typeof item === 'string' || typeof item === 'object');
     });
     for(var i = 0; i<args.length; i++){
