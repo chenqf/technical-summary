@@ -1,6 +1,6 @@
 // @flow Created by 陈其丰 on 2018/9/17.
 
-var proto = Array.prototype,
+const proto = Array.prototype,
     slice = [].slice,
     splice = [].splice;
 
@@ -39,7 +39,7 @@ Array.from = Array.from || function (items,mapFn,thisArg) {
  @return {Array.<T>}
  */
 proto.copyWithin = proto.copyWithin || function (target,start,enf) {
-    var len = this.length;
+    let len = this.length;
     target = target || 0;
     start = start || 0;
     enf = enf || len;
@@ -59,7 +59,7 @@ proto.copyWithin = proto.copyWithin || function (target,start,enf) {
  */
 proto.find = proto.find || function (predicate,thisArg) {
     predicate = predicate || function () {};
-    for(var i = 0,len = this.length; i<len; i++){
+    for(let i = 0,len = this.length; i<len; i++){
         if(!!predicate.call(thisArg,this[i],i,this)){
             return this[i];
         }
@@ -75,7 +75,7 @@ proto.find = proto.find || function (predicate,thisArg) {
  */
 proto.findIndex = proto.findIndex || function (predicate,thisArg) {
     predicate = predicate || function () {};
-    for(var i = 0,len = this.length; i<len; i++){
+    for(let i = 0,len = this.length; i<len; i++){
         if(!!predicate.call(thisArg,this[i],i,this)){
             return i;
         }
@@ -92,12 +92,12 @@ proto.findIndex = proto.findIndex || function (predicate,thisArg) {
  @return {Array.<T>}
  */
 proto.fill = proto.fill || function (value,start,end) {
-   var len = this.length;
+   let len = this.length;
    start = start || 0;
    end = end || len;
    if(start < 0) start = start + len;
    if(end < 0) end = end + len;
-   for(var i = 0; i<len; i++){
+   for(let i = 0; i<len; i++){
        if(i >= start && i<end){
            this[i] = value;
        }
@@ -113,9 +113,9 @@ proto.fill = proto.fill || function (value,start,end) {
  */
 proto.includes = proto.includes || function (searchElement,fromIndex) {
     fromIndex = fromIndex || 0;
-    var len = this.length;
-    if(fromIndex < 0) fromIndex = Math.max(fromIndex + len);
-    for(var i = fromIndex; i<len; i++){
+    let len = this.length;
+    if(fromIndex < 0) fromIndex = fromIndex + len < 0 ? 0 : fromIndex + len;
+    for(let i = fromIndex; i<len; i++){
         if(searchElement !== searchElement && this[i] !== this[i]){
             return true;
         }else if(searchElement === this[i]){
@@ -130,7 +130,7 @@ proto.includes = proto.includes || function (searchElement,fromIndex) {
  @return {array}
  */
 proto.flat = proto.flat || function (depth) {
-        depth = Number(depth) || 1;
+    depth = Number(depth) || 1;
     return this.reduce(function (init,cur) {
         return init.concat(depth - 1 > 0 ? (Array.isArray(cur) ? cur.flat(depth - 2) : cur) : cur)
     },[])
