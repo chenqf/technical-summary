@@ -131,6 +131,7 @@
 - [661.图片平滑器](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/661.imageSmoother)
 - [665.非递减数列](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/665.checkPossibility)
 - [667.优美的排列 II](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/667.constructArray)
+- [674.最长连续递增序列](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/674.findLengthOfLCIS)
 - [704.二分查找](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/704.search)
 - [713.乘积小于K的子数组](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/713.numSubarrayProductLessThanK)
 - [744.寻找比目标字母大的最小字母](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/QA/744.nextGreatestLetter)
