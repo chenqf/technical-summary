@@ -9,7 +9,7 @@ let findPeakElement = function (nums) {
     while (left < right){
         let mid = ~~(left + (right - left)/2),
             midVal = nums[mid];
-        if(mid + 1 === nums.length || midVal > nums[mid - 1]){
+        if(mid + 1 === nums.length || midVal > nums[mid + 1]){
             right = mid;
         }else{
             left = mid + 1;
