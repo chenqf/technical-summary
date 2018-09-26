@@ -11,12 +11,12 @@ let solution = function(isBadVersion) {
      */
     return function(n) {
         let left = 1,
-            right = n;
-        while (left <= right){
+            right = n + 1;
+        while (left < right){
             let mid = ~~((left + right)/2);
             let cur = isBadVersion(mid);
             if(cur){
-                right = mid - 1;
+                right = mid;
             }else{
                 left = mid + 1;
             }
