@@ -4,19 +4,16 @@
 let findMin = function (nums) {
     let len = nums.length;
     let left = 0,right = len - 1;
-    //排除数组个数为一，或未旋转的情况
-    if(nums[left] <= nums[right]){
-        return nums[0];
-    }
-    //找到旋转的位置
-    while (right - left > 1){
+    while (left < right && nums[left] > nums[right]){
         let mid = ~~((left + right)/2),
             midVal = nums[mid];
-        if(nums[left] < midVal){
-            left = mid;
-        }else if(midVal < nums[right]){
+        if(midVal > nums[left]){
+            left = mid + 1;
+        }else if(midVal > nums[mid + 1]){
+            left = mid + 1;
+        }else{
             right = mid;
         }
     }
-    return nums[right];
+    return nums[left];
 };
