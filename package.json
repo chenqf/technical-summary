@@ -4,7 +4,7 @@
   "description": "technical-summary",
   "main": "test.js",
   "scripts": {
-    "build":"node test/leet_code_build.js",
+    "build": "node test/leet_code_build.js",
     "test": "node test/index.js"
   },
   "repository": {
@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/chenqf/technical-summary#readme",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "files-tree": "^1.0.8",
-    "promises-aplus-tests": "^2.1.2"
+    "promises-aplus-tests": "^2.1.3"
   }
 }
