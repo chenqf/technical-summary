@@ -17,3 +17,11 @@ Number.isMinusZero = function (num) {
     return 0 === num && 1/num === -Infinity;
 };
 
+/**
+ * 真正的四舍五入
+ */
+Math.rounding = function round(n,decimals){
+    decimals = decimals || 0;
+    return Number(Math.round(n + 'e' + decimals) + 'e-' + decimals)
+};
+
