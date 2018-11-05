@@ -1,3 +1,15 @@
++ [二分法 (有序，或近似有序)](https://github.com/chenqf/technical-summary/tree/master/src/leetCode/BINARY.SEARCH.md)
++ 左开右闭 如何理解
++ 左闭右开 如何理解
++ 滑动窗口 (有序)     
+    设定 left = 0，right = 0，限定 right < len
+    先滑动 right，直至满足条件
+    再滑动 left 直至不满足条件
++ 几个数相加问题
+    两数之和
+    三数之和
+    三数近似和
+    四数之和
 + 双指针
 + 回溯
 + 分治
