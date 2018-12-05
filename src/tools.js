@@ -15,3 +15,12 @@ const fromPairs = pairs => pairs.reduce((res,cur)=>(res[cur[0]] = cur[1],res),{}
 
 //取出对象中的深层属性
 const pluckDeep = path => obj => path.split(',').reduce((map,attr)=>map[attr],obj);
+
+//排除精度，判断数字是否相等
+const numberEqual = (a,b)=>Math.abs((a - b)) <= Number.EPSILON;
+
+//是否是负零
+const isMinusZero = num => 0 === num && 1/num === -Infinity;
+
+//真正的四舍五入
+const rounding = (n,decimals = 0) => Number(Math.round(n + 'e' + decimals) + 'e-' + decimals);
