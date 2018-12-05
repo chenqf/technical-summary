@@ -15,6 +15,8 @@ const fromPairs = pairs => pairs.reduce((res,cur)=>(res[cur[0]] = cur[1],res),{}
 
 //取出对象中的深层属性
 const pluckDeep = path => obj => path.split(',').reduce((map,attr)=>map[attr],obj);
+//获取对象或数组中的深层属性
+const deepGet = (data,key)=> (new Function('data',`try{ return data.${key} }catch(e){}`))(data);
 
 //排除精度，判断数字是否相等
 const numberEqual = (a,b)=>Math.abs((a - b)) <= Number.EPSILON;
