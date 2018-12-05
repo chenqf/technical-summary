@@ -29,3 +29,14 @@ const rounding = (n,decimals = 0) => Number(Math.round(n + 'e' + decimals) + 'e-
 
 //将数组按照函数规则进行拆分为两个数组
 const partition = (arr, isValid) =>arr.reduce(([pass, fail], elem) =>isValid(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]],[[], []]);
+
+//是否是简单对象
+const isPlainObject = (obj)=>{
+    if(typeof obj !== 'object' || obj === null) return false;
+    let prop = obj;
+    //找到顶层 Object 的 prototype 属性
+    while (Object.getPrototypeOf(prop) !== null){
+        prop = Object.getPrototypeOf(prop);
+    }
+    return Object.getPrototypeOf(obj) === proto;
+};
