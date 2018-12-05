@@ -24,3 +24,6 @@ const isMinusZero = num => 0 === num && 1/num === -Infinity;
 
 //真正的四舍五入
 const rounding = (n,decimals = 0) => Number(Math.round(n + 'e' + decimals) + 'e-' + decimals);
+
+//将数组按照函数规则进行拆分为两个数组
+const partition = (arr, isValid) =>arr.reduce(([pass, fail], elem) =>isValid(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]],[[], []]);
