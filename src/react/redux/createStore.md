@@ -1,5 +1,5 @@
 ### 先看注释，很详细
-```ecmascript 6
+```javascript 1.8
 /**
  * 创建一个Redux store 用于存放应用所有的state。应用中有且只有一个store
  * @param reducer 是一个函数，接收两个参数，分别是当前state 和 要处理的action ,返回新的state树
