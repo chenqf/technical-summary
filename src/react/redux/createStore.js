@@ -1,12 +1,3 @@
-## 内容整理
-> 源码注释  
-> 为什么会出现 currentListeners 和 nextListeners
-> 为什么Reducer中不能进行dispatch操作？
-> 为什么applyMiddleware中middlewareAPI中的dispathc要用闭包包裹？
-
-
-#### 源码注释
-```javascript 1.8
 /**
  * 创建一个Redux store 用于存放应用所有的state。应用中有且只有一个store
  * @param reducer 是一个函数，接收两个参数，分别是当前state 和 要处理的action ,返回新的state树
@@ -233,92 +224,15 @@ export default function createStore(reducer, preloadedState, enhancer) {
         }
     }
 
-    //reducer 返回其初始状态 
+    //reducer 返回其初始状态
     //初始化 store 里的 state tree
     dispatch({ type: ActionTypes.INIT })
     //返回 store 暴漏出的接口
     return {
         dispatch, //唯一一个可以改变 state 的哈按时
-        subscribe, //订阅一个状态改变后，要触发的监听函数 
+        subscribe, //订阅一个状态改变后，要触发的监听函数
         getState, // 获取 store 里的 state
         replaceReducer, //Redux热加载的时候可以替换 Reducer
         [$$observable]: observable //对象的私有属性，供内部使用
     }
 }
-```
-
-#### 为什么会出现 currentListeners 和 nextListeners
-> 看过源码后，会发现 createStore 为了保存store 的订阅者，不仅保存了当前订阅者的 currentListeners 而且也保存 nextListeners，其中一个重要的函数 ensureCanMutateNextListeners。
-```javascript 1.8
-// 生成 订阅快照
-function ensureCanMutateNextListeners() {
-    if (nextListeners === currentListeners) {
-        nextListeners = currentListeners.slice()
-    }
-}
-```
-> 这个函数的实质作用是生成一个currentListeners的快照nextListeners    
-> 在订阅事件subscribe和取消订阅
-```javascript 1.8
-function subscribe(listener) {
-    // 生成 订阅快照
-    ensureCanMutateNextListeners()
-    //添加一个订阅函数
-    nextListeners.push(listener)
-    //返回一个用于取消订阅的函数
-    return function unsubscribe() {
-        ensureCanMutateNextListeners()
-        const index = nextListeners.indexOf(listener)
-        nextListeners.splice(index, 1)
-    }
-}
-```
->我们发现订阅和解除订阅都是在nextListeners做的操作，然后每次dispatch一个action都会做如下的操作:
-```javascript 1.8
-function dispatch(action) {
-    currentState = currentReducer(currentState, action)
-    //所有的的监听函数赋值给 listeners
-    //相当于currentListeners = nextListeners const listeners = currentListeners
-    const listeners = (currentListeners = nextListeners)
-    for (let i = 0; i < listeners.length; i++) {
-        const listener = listeners[i]
-        listener()
-    }
-    return action
-}
-```
-> 相当于currentListeners = nextListeners const listeners = currentListeners    
-> 解释一下 订阅者(subscriptions)在每次dispatch()调用之前都是一份快照(snapshotted)。如果你在listener被调用期间，进行订阅或者退订，在本次的dispatch()过程中是不会生效的，然而在下一次的dispatch()调用中，无论dispatch是否是嵌套调用的，都将使用最近一次的快照订阅者列表   
-> 疑问：JavaScript不是单线程的吗？怎么会出现上述所说的场景呢？   
-> 例如
-```javascript 1.8
-const store = createStore(reducers.todos)
-const unsubscribe1 = store.subscribe(() => {
-    const unsubscribe2 = store.subscribe(()=>{})
-})
-```
-
-#### 为什么Reducer中不能进行dispatch操作？
-> 1.reducer作为计算下一次state的纯函数是不应该承担执行dispatch这样的操作    
-> 2.在源码中已经对 dispatch 函数进行了限制，即使调用，也不会成功
-```javascript 1.8
-function dispatch(action) {
-    if (isDispatching) {
-      throw new Error('Reducers may not dispatch actions.')
-    }
-    try {
-      isDispatching = true
-      currentState = currentReducer(currentState, action)
-    } finally {
-      isDispatching = false
-    }
-
-    //...notice listener
-}
-```
-#### 为什么applyMiddleware中middlewareAPI中的dispathc要用闭包包裹？
-> //https://segmentfault.com/a/1190000010263353
-
-
-
-
