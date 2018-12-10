@@ -317,7 +317,7 @@ function dispatch(action) {
 }
 ```
 #### 为什么applyMiddleware中middlewareAPI中的dispathc要用闭包包裹？
-> //https://segmentfault.com/a/1190000010263353
+
 
 
 
