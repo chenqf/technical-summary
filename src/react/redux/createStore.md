@@ -195,41 +195,38 @@ export default function createStore(reducer, preloadedState, enhancer) {
     }
 
     /**
-     * Interoperability point for observable/reactive libraries.
-     * @returns {observable} A minimal observable of state changes.
-     * For more information, see the observable proposal:
-     * https://github.com/tc39/proposal-observable
-     */
+    * observable 预留接口
+    */
     function observable() {
+        //订阅方法赋值给变量 outerSubscribe
         const outerSubscribe = subscribe
         return {
-            /**
-             * The minimal observable subscription method.
-             * @param {Object} observer Any object that can be used as an observer.
-             * The observer object should have a `next` method.
-             * @returns {subscription} An object with an `unsubscribe` method that can
-             * be used to unsubscribe the observable from the store, and prevent further
-             * emission of values from the observable.
-             */
-            subscribe(observer) {
-                if (typeof observer !== 'object' || observer === null) {
-                    throw new TypeError('Expected the observer to be an object.')
-                }
-
-                function observeState() {
-                    if (observer.next) {
-                        observer.next(getState())
-                    }
-                }
-
-                observeState()
-                const unsubscribe = outerSubscribe(observeState)
-                return { unsubscribe }
-            },
-
-            [$$observable]() {
-                return this
+          /**
+           * 最小订阅方法
+           * 观察者应该有 `next` 方法
+           * 返回取消订阅函数
+           */
+          subscribe(observer) {
+            //判断 observer 是一个对象
+            if (typeof observer !== 'object' || observer === null) {
+              throw new TypeError('Expected the observer to be an object.')
             }
+            //获取observer的状态
+            function observeState() {
+              if (observer.next) {
+                observer.next(getState())
+              }
+            }
+            
+            observeState();
+            //返回一个取消订阅的方法
+            const unsubscribe = outerSubscribe(observeState);
+            return { unsubscribe }
+          },
+          //对象的私有属性，暂时不知道有什么用途
+          [$$observable]() {
+            return this
+          }
         }
     }
 
