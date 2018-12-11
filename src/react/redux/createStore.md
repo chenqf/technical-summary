@@ -41,7 +41,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
         if (typeof enhancer !== 'function') {
             throw new Error('Expected the enhancer to be a function.')
         }
-
+        //返回一个新强化过的 store creator
         return enhancer(createStore)(reducer, preloadedState)
     }
 
