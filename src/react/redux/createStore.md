@@ -15,7 +15,7 @@
  * 否则，你可以自由传入任何 reducer 可理解的内容
  * @param enhancer 是一个组合的高阶函数，返回一个强化过的 store creator .
  * 这与 middleware相似，它也允许你通过复合函数改变 store 接口
- * @returns 返回一个对象，给外部提供 dispatch, getState, subscribe, replaceReducer,
+ * @returns 返回一个对象，给外部提供 dispatch, getState, subscribe, replaceReducer
  */
 export default function createStore(reducer, preloadedState, enhancer) {
     // 判断 入参类型是否正确
