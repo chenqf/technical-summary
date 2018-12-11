@@ -2,7 +2,6 @@
 > 源码注释  
 > 为什么会出现 currentListeners 和 nextListeners
 > 为什么Reducer中不能进行dispatch操作？
-> 为什么applyMiddleware中middlewareAPI中的dispathc要用闭包包裹？
 
 
 #### 源码注释
@@ -313,7 +312,6 @@ function dispatch(action) {
     //...notice listener
 }
 ```
-#### 为什么applyMiddleware中middlewareAPI中的dispathc要用闭包包裹？
 
 
 
