@@ -16,7 +16,7 @@
 - [获取数组中元素与索引值和的最大/最小值](https://github.com/chenqf/technical-summary/tree/master/src/algorithm-question/getMaxOrMinItemAndIndex)
 ## React
 - [redux 源码解读](https://github.com/chenqf/technical-summary/tree/master/src/react/redux)
-
+- [redux-thunk 源码解读](https://github.com/chenqf/technical-summary/tree/master/src/react/redux-thunk)
 ## 正则相关 
 - [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/vetically)
 ## CSS相关 
