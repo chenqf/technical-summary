@@ -56,7 +56,8 @@ const compose = (...funcs)=> {
 //判断是否存在
 const exsity = (x)=> x !== null && x !== undefined;
 
-
+//判断对象是否被认为是true的同义词
+const truthy = (x)=> x !== false && exsity(x);
 
 
 
