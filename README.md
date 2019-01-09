@@ -18,9 +18,9 @@
 - [redux 源码解读](https://github.com/chenqf/technical-summary/tree/master/src/react/redux)
 - [redux-thunk 源码解读](https://github.com/chenqf/technical-summary/tree/master/src/react/redux-thunk)
 ## 正则相关 
-- [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/vetically)
+- [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/regExp/adjacentUnique)
 ## CSS相关 
-- [垂直居中](https://github.com/chenqf/technical-summary/tree/master/src/css/adjacentUnique) 
+- [垂直居中](https://github.com/chenqf/technical-summary/tree/master/src/css/vetically) 
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [数组并集、交集、差集](https://github.com/chenqf/technical-summary/tree/master/src/other/setOperation)

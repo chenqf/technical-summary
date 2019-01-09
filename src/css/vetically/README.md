@@ -10,7 +10,7 @@
 </div>
 ```
 ```css
-.box1{
+    .box1{
         /* 行高控制垂直居中 */
         line-height: 200px;
         background: grey;
