@@ -21,6 +21,7 @@
 - [字符串去除相邻重复项](https://github.com/chenqf/technical-summary/tree/master/src/regExp/adjacentUnique)
 ## CSS相关 
 - [垂直居中](https://github.com/chenqf/technical-summary/tree/master/src/css/vetically) 
+- [滚动进度条](https://github.com/chenqf/technical-summary/tree/master/src/css/scrollProgress) 
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
 - [数组并集、交集、差集](https://github.com/chenqf/technical-summary/tree/master/src/other/setOperation)
