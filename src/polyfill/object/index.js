@@ -24,3 +24,11 @@ Object.assign = function(){
     }
     return target;
 };
+
+Object.fromEntries = Object.fromEntries || function (entries) {
+    return entries.reduce(function (res,cur) {
+        res[cur[0]] = cur[1];
+        return res;
+    },{})
+};
+
