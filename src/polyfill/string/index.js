@@ -44,8 +44,20 @@ proto.endsWith = proto.endsWith || function (searchString , position) {
 /**
  * 去掉左右两边空格
  */
-proto.trim = proto.trim = function () {
+proto.trim = proto.trim || function () {
     return this.replace(/^\s+|\s+$/g,'')
+};
+/**
+ * 去掉左边空格
+ */
+proto.trimStart = proto.trimStart || function () {
+    return this.replace(/^\s+/,'')
+};
+/**
+ * 去掉右边空格
+ */
+proto.trimEnd = proto.trimEnd || function () {
+    return this.replace(/\s+$/,'')
 };
 
 /**
