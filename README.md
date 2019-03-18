@@ -24,6 +24,7 @@
 - [滚动进度条](https://github.com/chenqf/technical-summary/tree/master/src/css/scrollProgress) 
 ## 其他
 - [Promise 原生实现](https://github.com/chenqf/technical-summary/tree/master/src/other/promise)
+- [forEach 如何打破循环](https://github.com/chenqf/technical-summary/tree/master/src/other/forEach)
 - [数组并集、交集、差集](https://github.com/chenqf/technical-summary/tree/master/src/other/setOperation)
 - [单页应用路由实现](https://github.com/chenqf/technical-summary/tree/master/src/other/router)
 - [监察者模式简单实现](https://github.com/chenqf/technical-summary/tree/master/src/other/observer)
