@@ -36,4 +36,5 @@
 - [求二叉树最大深度](https://github.com/chenqf/technical-summary/tree/master/src/other/binaryTreeMaxDepth)
 
 ## 小玩具
+- [监控FPS](https://github.com/chenqf/technical-summary/tree/master/src/other/fps)
 - [canvas 水印实现](https://github.com/chenqf/technical-summary/tree/master/src/toy/watermark)
