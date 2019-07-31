@@ -2,7 +2,7 @@
     <div>
         <br><br>
         <div v-for="page in this.pages">
-            <a class="cqf_a" v-if="list.indexOf(page.frontmatter.ct) >= 0" @click="toPage(page)">{{page.title}}</a>
+            <a class="cqf_a" v-if="list.indexOf(page.frontmatter.ct) >= 0 || list.indexOf(page.frontmatter.ut) >= 0" @click="toPage(page)">{{page.title}}</a>
         </div>
     </div>    
 </template>
