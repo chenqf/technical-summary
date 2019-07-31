@@ -5,10 +5,10 @@ module.exports = {
     dest: '.vuepress/dist', // build 时的输出目录
     //考虑加入页面统计，看看访问量
     head: [
-        ['script', {  src: 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js' }],
+        // ['script', {  src: 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js' }],
         ['script', {  src: 'https://cdn.bootcss.com/moment.js/2.24.0/moment.js' }],
-        ['script', {  src: 'https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js' }],
-        ['script', {  src: 'https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js' }],
+        // ['script', {  src: 'https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js' }],
+        // ['script', {  src: 'https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js' }],
         ['link', { rel: 'stylesheet', href: '/style.css' }]
     ],
     markdown:{
