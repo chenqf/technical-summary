@@ -51,7 +51,7 @@ module.exports = {
             sidebarDepth: 3,
             children: [
                 '/js/深拷贝',
-                '/js/正则',
+                '/js/正则/',
                 '/js/推荐书写',
             ]
         }],
