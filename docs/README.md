@@ -11,6 +11,12 @@
 
 尝试过各种云笔记，总感觉不是很好，索性自己搞一个，方便随时查看。
 
+### 提问及勘误
+
+因为笔记内容为我平日的总结学习内容，所以会忽略很多的逻辑内容。
+
+如果你有疑问，或者想指出笔记内容的不如，欢迎到[issues](https://github.com/chenqf/technical-summary/issues)区与我互动~
+
 ### 我的专栏
 
 + [掘金主页](https://juejin.im/user/5c6e666be51d457fd033e984/posts)

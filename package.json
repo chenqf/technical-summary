@@ -4,6 +4,7 @@
   "description": "technical-summary",
   "main": "test.js",
   "scripts": {
+    "dev": "vuepress dev ./docs",
     "build": "node test/leet_code_build.js",
     "test": "node test/index.js"
   },
