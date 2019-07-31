@@ -12,9 +12,9 @@ module.exports = {
     //     ['link', { rel: 'icon', href: '/logo.png' }]
     ],
     markdown:{
-        toc: {
-            includeLevel: [2, 3, 4, 5, 6]
-        },
+        // toc: {
+        //     includeLevel: [2, 3, 4, 5, 6]
+        // },
         // lineNumbers:true, //是否显示行号
     },
     themeConfig: {
