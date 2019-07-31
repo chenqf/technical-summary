@@ -9,3 +9,16 @@
     color: #ff502c!important;
     padding: .065em .4em!important;
 }
+
+.page h1 code{
+    background-color: #fff5f5!important;
+    color: #ff502c!important;
+}
+.page h2 code{
+    background-color: #fff5f5!important;
+    color: #ff502c!important;
+}
+.page h3 code{
+    background-color: #fff5f5!important;
+    color: #ff502c!important;
+}

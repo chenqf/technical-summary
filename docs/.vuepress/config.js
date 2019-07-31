@@ -50,9 +50,10 @@ module.exports = {
             title: 'JavaScript',
             sidebarDepth: 3,
             children: [
-                '/js/深拷贝',
+                '/js/深拷贝/',
                 '/js/正则/',
-                '/js/推荐书写',
+                '/js/Object & Function/',
+                '/js/推荐书写/',
             ]
         }],
         lastUpdated: '上次更新时间',//上次更新时间
