@@ -19,9 +19,14 @@ module.exports = {
     },
     themeConfig: {
         // 右上导航
-        nav: [{
+        nav: [
+            {
                 text: '主页',
                 link: '/'
+            },
+            {
+                text: '我的复习',
+                link: '/review/'
             },
             // {
             //     text: '工具收集',

@@ -1,8 +1,6 @@
-
-
 <template>
     <div>
-        今日复习内容：<br><br>
+        <br><br>
         <div v-for="page in this.pages">
             <a class="cqf_a" v-if="list.indexOf(page.frontmatter.ct) >= 0" @click="toPage(page)">{{page.title}}</a>
         </div>
