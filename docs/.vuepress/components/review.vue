@@ -42,4 +42,7 @@ module.exports = {
 .cqf_a{
     cursor: pointer;
 }
+
 </style>
+
+

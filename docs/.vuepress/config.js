@@ -9,7 +9,7 @@ module.exports = {
         ['script', {  src: 'https://cdn.bootcss.com/moment.js/2.24.0/moment.js' }],
         ['script', {  src: 'https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js' }],
         ['script', {  src: 'https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js' }],
-    //     ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'stylesheet', href: '/style.css' }]
     ],
     markdown:{
         // toc: {
