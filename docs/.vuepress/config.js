@@ -53,6 +53,7 @@ module.exports = {
                 '/js/深拷贝/',
                 '/js/正则/',
                 '/js/Object & Function/',
+                '/js/组合和管道/',
                 '/js/推荐书写/',
             ]
         }],
