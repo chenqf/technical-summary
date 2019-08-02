@@ -6,23 +6,11 @@ ct: 2019/08/01
 
 ## 函数组合
 
-```javascript
-const compose = function(...fns){
-    return function(x){
-        return fns.reduceRight((init,cur)=>cur(init),x)
-    }
-}
-```
+<<< @/docs/js/组合和管道/compose.js
 
 ## 函数管道
 
-```javascript
-const pipe = function(...fns){
-    return function(x){
-        return fns.reduce((init,cur)=>cur(init),x)
-    }
-}
-```
+<<< @/docs/js/组合和管道/pipe.js
 
 ## 好处
 
@@ -32,7 +20,9 @@ const pipe = function(...fns){
 
 传统代码编写方式，当需求变更时，只能修改原有的代码，很难不违反设计模式中的`开闭原则`。
 
-> 开闭原则是指一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。是针对我们封装，抽象出来的代码，而不是调用的逻辑代码。
+::: tip 开闭原则
+指一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。是针对我们封装，抽象出来的代码，而不是调用的逻辑代码。
+:::
 
 ## 建议
 
