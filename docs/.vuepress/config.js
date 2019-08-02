@@ -26,7 +26,11 @@ module.exports = {
             },
             {
                 text: '我的复习',
-                link: '/review/'
+                link: '/mine/review'
+            },
+            {
+                text: '好文收藏',
+                link: '/mine/collect'
             },
             // {
             //     text: '工具收集',
@@ -45,18 +49,37 @@ module.exports = {
         sidebarDepth: 4,
         // displayAllHeaders: true, // 显示所有页面的标题链接
         // displayAllHeaders :true,
-        sidebar: [{
-            path: '/js/',
-            title: 'JavaScript',
-            sidebarDepth: 3,
-            children: [
-                '/js/深拷贝/',
-                '/js/正则/',
-                '/js/Object & Function/',
-                '/js/组合和管道/',
-                '/js/推荐书写/',
-            ]
-        }],
+        sidebar: [
+            {
+                // path: '/js/',
+                title: 'JavaScript',
+                sidebarDepth: 3,
+                children: [
+                    '/js/深拷贝/',
+                    '/js/正则/',
+                    '/js/Object & Function/',
+                    '/js/组合和管道/',
+                    '/js/Object权限/',
+                    '/js/推荐书写/',
+                ]
+            },
+            {
+                // path: '/framework/',
+                title: '浏览器',
+                sidebarDepth: 3,
+                children: [
+                    '/brower/DOM操作/',
+                ]
+            },
+            {
+                // path: '/framework/',
+                title: '架构相关',
+                sidebarDepth: 3,
+                children: [
+                    
+                ]
+            }
+        ],
         lastUpdated: '上次更新时间',//上次更新时间
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         repo: 'https://github.com/chenqf/technical-summary',
