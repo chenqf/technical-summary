@@ -60,6 +60,7 @@ module.exports = {
                     '/js/Object & Function/',
                     '/js/组合和管道/',
                     '/js/Object权限/',
+                    '/js/Proxy/',
                     '/js/推荐书写/',
                 ]
             },
