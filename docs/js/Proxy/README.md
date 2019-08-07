@@ -1,5 +1,6 @@
 ---
 ct: 2019/08/05
+ut: 2019/08/07
 ---
 
 # Proxy
@@ -15,6 +16,8 @@ ct: 2019/08/05
 + `target` 目标对象
 + `propKey` 属性名
 + `receiver` **读操作所在的对象**
+
+需要注意的是：`get方法可以被继承`，当对象的原型为proxy，对非自身属性取值时，会触发proxy的get
 
 **数组读取负数的索引：**
 
@@ -36,7 +39,6 @@ p[-1]; // c
 ```javascript
 const proxy = new Proxy({}, {
     get: function (target, property, receiver) {
-        //
         console.log(receiver === d); // true
         return receiver;
     }
@@ -82,6 +84,8 @@ proxy.foo // 返回的值与value不同，报错
 + `prop` 属性名
 + `value` 属性值
 + `receiver` **赋值操作行为所在的对象**
+
+需要注意的是：`set方法可以被继承`，当对象的原型为proxy，对非自身属性赋值时，会触发proxy的set
 
 **用于属性赋值时的校验（年龄必须为不大于200的整数）：**
 
@@ -176,7 +180,7 @@ let proxy = new Proxy(target, handler);
 '_prop' in proxy // false
 ```
 
-**对象不可扩展或属性不可配置，使用`has`拦截返回false会报错：**
+**对象不可扩展或属性不可配置，使用`has`拦截返回`false`会报错：**
 
 ```javascript
 let obj = { a: 10 };
@@ -259,4 +263,107 @@ let P = new Proxy(C,{
 
 let p = new P(1,2);
 console.log(p); // { a: 10, b: 20 }
+```
+
+### deleteProperty(target,key)
+
+`deleteProperty`用于拦截`delete`操作。
+
++ `target` 目标对象
++ `key` 属性值
+
+**如果`抛出错误`或返回`false`，则无法删除属性**
+
+```javascript
+let obj = {a:1};
+let p = new Proxy(obj,{
+    deleteProperty(target,key){
+        return false;
+    }
+})
+
+delete p.a;
+console.log(obj.a); // 1
+```
+
+**若属性`configurable:false`，则不能被`deleteProperty`删除**
+
+```javascript
+let obj = {a:1};
+Object.defineProperty(obj,'a',{
+    configurable:false
+})
+let p = new Proxy(obj,{
+    deleteProperty(target,key){
+        return true;
+    }
+})
+
+delete p.a; // 提示错误，没有删除成功
+```
+
+### defineProperty(target,key)
+
+`defineProperty`用于拦截了`Object.defineProperty`操作。
+
+```javascript
+let handler = {
+    defineProperty(target, key, descriptor) {
+        return false;
+    }
+};
+let target = {};
+let proxy = new Proxy(target, handler);
+proxy.foo = 'bar' // 不会生效
+```
+
+### getPrototypeOf(target)
+
+用于拦截以下这些获取原型的操作：
+
++ `getPrototypeOf()`
++ `isPrototypeOf()`
++ `__proto__`
++ `instanceof`
+
+```javascript
+let proto = {};
+let p = new Proxy({}, {
+  getPrototypeOf(target) {
+    return proto;
+  }
+});
+Object.getPrototypeOf(p) === proto; // true
+```
+
+
+### setPrototypeOf(target,proto)
+
+`setPrototypeOf`方法主要用来拦截`Object.setPrototypeOf`方法
+
+**必须返回一个`boolean`值，`false`时报错**
+
+```javascript
+let proto = {};
+let proxy = new Proxy({}, {
+    setPrototypeOf(target, p) {
+        return false;
+    }
+});
+Object.setPrototypeOf(proxy, proto); // 报错
+proxy.__proto__ = proto  // 报错
+```
+
+**容许修改原型时，返回`true`,并修改`target`的原型**
+
+```javascript
+let proto = {};
+let proxy = new Proxy({}, {
+    setPrototypeOf(target, p) {
+        Object.setPrototypeOf(target,p)
+        return true;
+    }
+});
+Object.setPrototypeOf(proxy, proto);
+proxy.__proto__ = proto  
 ```
