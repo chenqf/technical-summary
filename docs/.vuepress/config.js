@@ -70,6 +70,15 @@ module.exports = {
                 sidebarDepth: 3,
                 children: [
                     '/brower/DOM操作/',
+                    '/brower/渲染过程/',
+                ]
+            },
+            {
+                // path: '/framework/',
+                title: 'React',
+                sidebarDepth: 3,
+                children: [
+                    '/react/HOC/',
                 ]
             },
             {
