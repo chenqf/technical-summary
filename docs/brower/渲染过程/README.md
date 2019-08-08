@@ -28,3 +28,6 @@ JS 修改 DOM 需要重新计算 Render Tree 么
 
 Rendering 和 Painting 的区别
 
+搭建一个 vue 模板
+
+https://zhuanlan.zhihu.com/p/70752505
