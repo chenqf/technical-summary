@@ -49,3 +49,4 @@ function withModifiedChildren(WrappedComponent) {
 const MyNewComponent = withModifiedChildren(MyComponent);
 ```
 
+[见过的最优秀的React文章](https://dmitripavlutin.com/7-architectural-attributes-of-a-reliable-react-component/)

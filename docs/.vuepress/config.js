@@ -71,6 +71,7 @@ module.exports = {
                 children: [
                     '/brower/DOM操作/',
                     '/brower/渲染过程/',
+                    '/brower/图片/',
                 ]
             },
             {
