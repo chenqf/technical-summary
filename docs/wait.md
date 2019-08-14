@@ -8,4 +8,3 @@
 
 搭建一个 vue 模板
 
-https://zhuanlan.zhihu.com/p/70752505
