@@ -1,5 +1,3 @@
-
-
 class Event{
     constructor(){
         this._events = new Map();
@@ -18,18 +16,11 @@ class Event{
             try{
                 handlers[i].apply(this,args)
             }catch(e){
-
+                console.log(e);
             }
         }
     }
-    remove(key,callback){
-        let handlers = this._events.get(key) || [];
-        let index = handlers.indexOf(callback);
-        if(index >=0){
-            handlers.splice(index,1)
-        }
-        if(!handlers.length){
-            this._events.delete(key)
-        }
+    remove(key){
+        this._events.delete(key)
     }
 }
