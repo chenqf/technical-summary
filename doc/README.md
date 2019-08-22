@@ -25,7 +25,7 @@
 
 欢迎关注微信公众号【前端小黑屋】，每周1-3篇精品优质文章推送
 
-![](https://raw.githubusercontent.com/chenqf/frontEndBlog/master/gongzhonghao.jpg)
+![](https://raw.githubusercontent.com/chenqf/frontEndBlog/master/gongzhonghao_sou.png)
 
 ### 支持
 
