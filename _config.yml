@@ -2,5 +2,5 @@ theme: jekyll-theme-merlot
 
 deploy:
   type: git
-  repo: git@github.com:cczeng/cczeng.github.io.git
+  repo: git@github.com:chenqf/technical-summary.git
   branch: master
