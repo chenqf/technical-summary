@@ -6,11 +6,11 @@ ct: 2019/08/01
 
 ## 函数组合
 
-<<< @/docs/js/组合和管道/compose.js
+<<< @/doc/js/组合和管道/compose.js
 
 ## 函数管道
 
-<<< @/docs/js/组合和管道/pipe.js
+<<< @/doc/js/组合和管道/pipe.js
 
 ## 好处
 

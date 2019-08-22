@@ -7,8 +7,8 @@ EventBus是消息传递的一种方式，基于一个消息中心，订阅和发
 
 ## 实现
 
-<<< @/docs/js/Event Bus/index.js
+<<< @/doc/js/Event Bus/index.js
 
 ## 使用
 
-<<< @/docs/js/Event Bus/use.js
+<<< @/doc/js/Event Bus/use.js

@@ -21,11 +21,76 @@
 <script>
 const CACHE_KEY = "cqf_cache";
 
-module.exports = {
+const formatDate = function(date, format) {
+  if (arguments.length < 2 && !date.getTime) {
+    format = date;
+    date = new Date();
+  }
+  typeof format != "string" && (format = "YYYY年MM月DD日 hh时mm分ss秒");
+  var week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "日",
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六"
+  ];
+  return format.replace(/YYYY|YY|MM|DD|hh|mm|ss|星期|周|www|week/g, function(
+    a
+  ) {
+    switch (a) {
+      case "YYYY":
+        return date.getFullYear();
+      case "YY":
+        return (date.getFullYear() + "").slice(2);
+      case "MM":
+        return date.getMonth() + 1 < 10
+          ? "0" + (date.getMonth() + 1)
+          : date.getMonth() + 1;
+      case "DD":
+        return date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+      case "hh":
+        return date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+      case "mm":
+        return date.getMinutes() < 10
+          ? "0" + date.getMinutes()
+          : date.getMinutes();
+      case "ss":
+        return date.getSeconds() < 10
+          ? "0" + date.getSeconds()
+          : date.getSeconds();
+      case "星期":
+        return "星期" + week[date.getDay() + 7];
+      case "周":
+        return "周" + week[date.getDay() + 7];
+      case "week":
+        return week[date.getDay()];
+      case "www":
+        return week[date.getDay()].slice(0, 3);
+    }
+  });
+};
+
+export default {
   props: ["pages"],
-  created() {
+  mounted(){
     // 需要复习的日期
     this.list = [
+      // formatDate(new Date(Date.now() - 86400000 * 1),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 2),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 4),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 7),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 15),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 30),"YYYY/MM/DD"),
+      // formatDate(new Date(Date.now() - 86400000 * 60),"YYYY/MM/DD"),
       moment(new Date())
         .subtract(1, "days")
         .format("YYYY/MM/DD"),
@@ -51,6 +116,7 @@ module.exports = {
 
     //找到今天复习的缓存数据
     let today = moment(new Date()).format("YYYY/MM/DD");
+    // let today = formatDate(new Date(),"YYYY/MM/DD");
     let cache = localStorage.getItem(CACHE_KEY) || "{}";
     let cacheObj = JSON.parse(cache);
     if (!cacheObj.hasOwnProperty(today)) {
@@ -60,6 +126,9 @@ module.exports = {
       cacheObj[today] = [];
     }
     this.checkBoxList = cacheObj[today];
+  },
+  created() {
+    
   },
   data: function() {
     return {
@@ -82,6 +151,7 @@ module.exports = {
       if (index === -1) {
         this.checkBoxList.push(path);
         let today = moment(new Date()).format("YYYY/MM/DD");
+        //  let today = formatDate(new Date(),"YYYY/MM/DD");
         let valueObj = {};
         valueObj[today] = this.checkBoxList;
         localStorage.setItem(CACHE_KEY, JSON.stringify(valueObj));
@@ -92,6 +162,7 @@ module.exports = {
       if (index >= 0) {
         this.checkBoxList.splice(index, 1);
         let today = moment(new Date()).format("YYYY/MM/DD");
+        //  let today = formatDate(new Date(),"YYYY/MM/DD");
         let valueObj = {};
         valueObj[today] = this.checkBoxList;
         localStorage.setItem(CACHE_KEY, JSON.stringify(valueObj));

@@ -2,7 +2,7 @@ module.exports = {
     title: '前端小黑屋',
     description: '云中桥的技术整理',
     port: 8080,
-    dest: '.vuepress/dist', // build 时的输出目录
+    dest: 'docs', // build 时的输出目录
     //考虑加入页面统计，看看访问量
     head: [
         // ['script', {  src: 'https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js' }],
