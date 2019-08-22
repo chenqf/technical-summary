@@ -1,5 +1,6 @@
 module.exports = {
     title: '前端小黑屋',
+    base:'/technical-summary/',
     description: '云中桥的技术整理',
     port: 8080,
     dest: 'docs', // build 时的输出目录
@@ -28,10 +29,10 @@ module.exports = {
                 text: '我的复习',
                 link: '/mine/review'
             },
-            {
-                text: '好文收藏',
-                link: '/mine/collect'
-            },
+            // {
+            //     text: '好文收藏',
+            //     link: '/mine/collect'
+            // },
             // {
             //     text: '工具收集',
             //     link: '/'
