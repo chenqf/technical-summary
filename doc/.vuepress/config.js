@@ -105,7 +105,7 @@ module.exports = {
         repoLabel: '查看源码',
 
         // 假如文档不是放在仓库的根目录下：
-        docsDir: 'docs',
+        docsDir: 'doc',
         // 默认是 false, 设置为 true 来启用
         editLinks: true,
         // 默认为 "Edit this page"
