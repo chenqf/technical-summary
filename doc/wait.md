@@ -1,14 +1,22 @@
 
 
-图片懒加载
-1. 最古老方式
-2. 目前的方法
-3. chrome lazying 属性
+## 需要学习的
 
-## css
+无痕埋点
+Hybrid
+瀑布流
 
+## 新属性
+
+chrome lazying
+多图适配
 overscroll-behavior
 
+## 在线图书
+
+webpack ： http://webpack.wuhaolin.cn/
+
+## css
 
 ## other 
 
