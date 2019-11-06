@@ -5,6 +5,12 @@
 2. 目前的方法
 3. chrome lazying 属性
 
+## css
+
+overscroll-behavior
+
+
+## other 
 
 搭建一个 vue 模板
 
