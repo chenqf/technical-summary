@@ -67,6 +67,7 @@ module.exports = {
                     '/js/转化驼峰命名/',
                     '/js/实现instanceOf/',
                     '/js/运算符优先级/',
+                    '/js/埋点统计/',
                     '/js/推荐书写/',
                 ]
             },
