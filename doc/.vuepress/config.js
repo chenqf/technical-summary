@@ -72,6 +72,13 @@ module.exports = {
                 ]
             },
             {
+                title:'UI样式',
+                sidebarDepth:3,
+                children:[
+                    '/css/文本溢出截断/',
+                ]
+            },
+            {
                 // path: '/framework/',
                 title: '浏览器',
                 sidebarDepth: 3,

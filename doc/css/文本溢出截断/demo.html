@@ -1,0 +1,36 @@
+<style>
+    .demo {
+        background: #099;
+        max-height: 80px;
+        line-height: 20px;
+        overflow: hidden;
+    }
+    .demo::before{
+        float: left;
+        content:'';
+        width: 20px;
+        height: 80px;
+    }
+
+    .demo .text {
+        float: right;
+        width: 100%;
+        margin-left: -20px;
+        word-break: break-all;
+    }
+    .demo::after{
+        float:right;
+        content:'...';
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left:100%;
+        transform: translate(-100%,-100%);
+    }
+</style>
+
+<body>
+    <div class='demo'>
+    	<div class="text">这是一段很长的文本</div>
+    </div>
+</body>
