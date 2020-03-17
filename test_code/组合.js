@@ -8,13 +8,13 @@
 
 const compose = (...fns) => {
     return x => {
-        return fns.reduceRight((cur, init) => init(cur), x);
+        return fns.reduceRight((init, cur) => cur(init), x);
     }
 }
 
 const pipe = (...fns) => {
     return x => {
-        return fns.reduce((cur, init) => init(cur), x);
+        return fns.reduce((init, cur) => cur(init), x);
     }
 }
 

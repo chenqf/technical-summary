@@ -43,7 +43,7 @@ const clone = (obj, hash = new WeakMap()) => {
         }
     }
     //set对象
-    else if (type === '[object Map]') {
+    else if (type === '[object Set]') {
         result = new Set();
         hash.set(obj, result);
         obj.forEach(item => {
