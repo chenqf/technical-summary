@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" style="height:20px;border:1px solid red;margin:10px"><span>3333</span></div>
+</body>
+<script>
+    const div = document.getElementById('div1')
+    div.addEventListener('click', () => console.log(11))
+    const clone1 = div.cloneNode()
+    const clone2 = div.cloneNode(true)
+</script>
+
+</html>
