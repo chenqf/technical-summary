@@ -1,4 +1,4 @@
-// TODO 循环引用 非枚举属性 symbol
+// TODO 非枚举属性 symbol 函数 类对象等
 const clone = (obj, hash = new WeakMap()) => {
     let result;
     if (hash.has(obj)) {
