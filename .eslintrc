@@ -1,0 +1,21 @@
+{
+  "root": true,
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "vue"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": "off"
+    }, 
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+}
