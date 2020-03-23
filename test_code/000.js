@@ -209,4 +209,23 @@ const f2 = x => x * 3;
 const f3 = x => x - 2;
 
 
-console.log(pipe(f1, f2, f3)(10));
+
+var array = [, , , , 1, 2, 3, 4, 5, 6]
+var keys = array.keys();
+var values = array.values();
+
+// for (let i of keys) {
+//     console.log('keys:', i);
+
+// }
+
+
+var list = [1, 2, 3, , , , 4, , , , 5, 6];
+
+
+var l = list.sort((a, b) => {
+    console.log(a, b);
+    return a - b;
+})
+
+console.log(l);
