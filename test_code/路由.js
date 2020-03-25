@@ -19,4 +19,4 @@ window.addEventListener('popstate', function () {}) // 根据pathname触发回�
 
 //封装函数,用于js跳转url,使用pushState replaceState 方法,并触发对应的回调
 
-//全局拦截a连接,实现调用pushState 和 replaceState 的方法
+//全局拦截a连接,实现调用pushState 和 replaceState 的方法  e.preventDefault()

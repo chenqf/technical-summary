@@ -32,7 +32,7 @@ const throttle = function (fn, wait, leading = true, trailing = true) {
     let preTime = 0;
     return function (...args) {
         let now = Date.now();
-        if (!trailing && !preTime) {
+        if (!leading && !preTime) {
             preTime = now;
         }
         if (now - preTime >= wait) {
