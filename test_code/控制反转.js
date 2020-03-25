@@ -9,39 +9,52 @@ class App {
         this.init();
     }
     static modules = [];
-    static use(module) {
-        App.modules.push(module);
+    static use(...modules) {
+        App.modules = [...App.modules, ...modules];
     }
     init() {
         this.initModules();
-        //自身初始化
         this.options.initReady(this);
     }
     initModules() {
-        // 每个依赖的模块都需要实现init接口
-        App.modules.forEach(module => module.init(this))
+        App.modules.forEach(module => {
+            module.init(this);
+        })
     }
 }
 
-const moduleA = {
-    init(app) {
-        console.log(app);
+class A {
+    constructor() {
+
     }
-}
-const moduleB = {
     init(app) {
-        console.log(app);
+        app.A = {
+            config: app.options.configA
+        };
     }
 }
 
-//注入依赖
-App.use(moduleA);
-App.use(moduleB);
+class B {
+    constructor() {
+
+    }
+    init(app) {
+        app.B = {
+            config: app.options.configB
+        };
+    }
+}
+
+App.use(new A, new B);
 
 new App({
-    moduleA: 1,
-    moduleB: 2,
+    configA: {
+        a: 1
+    },
+    configB: {
+        b: 2
+    },
     initReady(app) {
-        console.log('-----')
+        console.log(app)
     }
 })

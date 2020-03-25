@@ -146,3 +146,74 @@ const shunt = (array, num = 3) => {
 // history.replaceState
 // window.addEventLister('popstate')
 // 全局拦截 e.preventDefault()
+
+
+
+class App {
+    constructor(options) {
+        this.options = options;
+        this.init();
+    }
+    static modules = [];
+    static use(...modules) {
+        App.modules = [...App.modules, ...modules];
+    }
+    init() {
+        this.initModules();
+        this.options.initReady(this);
+    }
+    initModules() {
+        App.modules.forEach(module => {
+            module.init(this);
+        })
+    }
+}
+
+class A {
+    constructor() {
+
+    }
+    init(app) {
+        app.A = {
+            config: app.options.configA
+        };
+    }
+}
+
+class B {
+    constructor() {
+
+    }
+    init(app) {
+        app.B = {
+            config: app.options.configB
+        };
+    }
+}
+
+App.use(new A, new B);
+
+new App({
+    configA: {
+        a: 1
+    },
+    configB: {
+        b: 2
+    },
+    initReady(app) {
+        console.log(app)
+    }
+})
+
+
+const obj = {
+    0: 0,
+    1: 1,
+    3: 3,
+    5: 5,
+    7: 7,
+    8: 8,
+    10: 10
+};
+Array.prototype.unshift.call(obj, 100);
+console.log(obj);
