@@ -162,3 +162,20 @@ class Promise {
         })
     }
 }
+
+
+
+const list = Array.from({
+    0: 0,
+    1: 1,
+    2: 2,
+    length: 10
+}, item => item)
+
+console.log(list)
+
+
+const str = '123456'
+
+
+console.log(str.replace(/(?=1)(\d)/, '--$2--'))
